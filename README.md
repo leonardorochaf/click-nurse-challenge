@@ -1,54 +1,79 @@
-# React + TypeScript + Vite
+# ClickNurse Frontend challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Objective
 
-Currently, two official plugins are available:
+Develop an application that allows users to:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- List Available Shifts: View a list of shifts including basic information such as the company name, job title, date, location, and remuneration.
+- View Shift Details: Click on a shift to be redirected to a detail page showing additional information like a service description, work schedule, requirements, and benefits.
+- Apply for a Shift: Submit an application by clicking the "Candidatar-se" button, with feedback provided to indicate a successful or unsuccessful submission.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Shift Listing: Display a list of available shifts with essential details.
+- Shift Details: Provide a dedicated page with comprehensive information about each shift.
+- Application Process: Allow users to apply for a shift and receive immediate feedback on their application.
+- Responsive Design: Ensure a mobile-friendly experience for users on different devices.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Technical Overview
+
+This project is built with modern web technologies:
+
+- **React** - Frontend library for building user interfaces
+- **TypeScript** - Static typing for JavaScript
+- **Vite** - Next generation frontend tooling
+- **shadcn/ui** - High-quality React components
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router** - Client-side routing
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v20 or higher)
+- pnpm (v9 or higher)
+
+### Installation
+
+1. Clone the repository:
+
+```sh
+git clone git@github.com:leonardorochaf/click-nurse-challenge.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Navigate to the project directory:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```sh
+cd click-nurse-challenge
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+3. Install dependencies:
+
+```sh
+pnpm install
+```
+
+4. Start the development server:
+
+```sh
+pnpm dev
+```
+
+The application will be available at `http://localhost:8080`
+
+### Building for Production
+
+To create a production build:
+
+```sh
+pnpm build
+```
+
+## Project Structure
+
+```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Page components
+├── lib/          # Utility functions and constants
 ```

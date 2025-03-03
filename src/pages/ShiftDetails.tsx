@@ -223,13 +223,11 @@ const ShiftDetails = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 space-y-6">
-              {/* Description */}
               <section className="glass-card rounded-xl p-6">
                 <h2 className="text-xl font-semibold mb-4">Descrição do Plantão</h2>
                 <p className="text-muted-foreground">{shift.description}</p>
               </section>
               
-              {/* Requirements */}
               <section className="glass-card rounded-xl p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <ClipboardList className="text-primary h-5 w-5" />
@@ -247,7 +245,6 @@ const ShiftDetails = () => {
                 </ul>
               </section>
               
-              {/* Benefits */}
               <section className="glass-card rounded-xl p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <Award className="text-primary h-5 w-5" />
@@ -267,7 +264,6 @@ const ShiftDetails = () => {
             </div>
             
             <div>
-              {/* Shift Details */}
               <section className="glass-card rounded-xl p-6 sticky top-24">
                 <h2 className="text-xl font-semibold mb-4">Detalhes do Plantão</h2>
                 
