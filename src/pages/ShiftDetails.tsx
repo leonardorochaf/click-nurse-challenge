@@ -21,7 +21,7 @@ import {
   applyForShift, 
   cancelApplication 
 } from "@/lib/storage";
-import { formatCurrency, formatDate } from "@/lib/utils";
+import { delay, formatCurrency, formatDate } from "@/lib/utils";
 
 const ShiftDetails = () => {
   const { id } = useParams<{ id: string }>();
@@ -35,7 +35,7 @@ const ShiftDetails = () => {
       setLoading(true);
       
       try {
-        await new Promise(resolve => setTimeout(resolve, 400));
+        await delay(400);
         
         if (id) {
           const shiftData = getShiftById(id);
@@ -68,7 +68,7 @@ const ShiftDetails = () => {
     setApplying(true);
     
     try {
-      await new Promise(resolve => setTimeout(resolve, 800));
+      await delay(800);
       
       const success = applyForShift(shift.id);
       
@@ -103,7 +103,7 @@ const ShiftDetails = () => {
     setApplying(true);
     
     try {
-      await new Promise(resolve => setTimeout(resolve, 800));
+      await delay(800);
       
       const success = cancelApplication(shift.id);
       

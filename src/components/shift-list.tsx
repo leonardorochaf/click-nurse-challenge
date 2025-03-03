@@ -3,6 +3,7 @@ import { Shift, ShiftListResponse } from "@/types";
 import { ShiftCard } from "./shift-card";
 import { getShifts } from "@/lib/storage";
 import { Loader2 } from "lucide-react";
+import { delay } from "@/lib/utils";
 
 export function ShiftList() {
   const [shifts, setShifts] = useState<Shift[]>([]);
@@ -22,7 +23,7 @@ export function ShiftList() {
     
     setLoading(true);
     try {
-      await new Promise(resolve => setTimeout(resolve, 800));
+      await delay(800);
       
       const response: ShiftListResponse = getShifts(page);
       
